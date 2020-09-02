@@ -51,15 +51,15 @@ function draw() {
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
 
- keyPressed();
- drawSprites();
+  if(keyDown("down")) {
+     keyPressed();
+  }
+  drawSprites();
  
 }
 
 function keyPressed() {
- 	if (keyCode === DOWN_ARROW) {
-		packageSprite.velocityY = 10;
-  }
+     packageSprite.velocityY = 10;
 }
 
 
